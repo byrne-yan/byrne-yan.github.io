@@ -5,9 +5,9 @@
   <meta property="wb:webmaster" content="178f283812a4aa4d" />
   <!--必填-->
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+  <meta property="og:url" content="{{site.url}}/{{ page.url}}" />
   <meta property="og:title" content="{{page.title}}" />
-  <meta property="og:description" content="{{page.categories}} {{page.tags}}" />
+  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
   <!--选填-->
 <!--  <meta property="og:image" content="文章的显示图片" />-->
   <meta name="weibo: article:create_at" content="{{page.date}}" />
