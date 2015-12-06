@@ -9,6 +9,7 @@ tags:
     - ubuntu
     - sublime text
     - 中文输入
+    - 转载
 ---
 
 在我的ubuntu机器上安装sublime text后发现无法输入中文，检索后找到个解决方法：
