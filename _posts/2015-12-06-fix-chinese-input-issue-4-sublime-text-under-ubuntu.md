@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "解决Ubuntu下Sublime Text 3无法输入中文"
-subtitle: "转载"
 ＃date: 2014-10-11 18:28:48 +0800
 author: "颜俊标"
+source: "http://www.jianshu.com/p/bf05fb3a4709"
 header-img: "img/post-bg-2015.jpg"
 tags:
     - ubuntu

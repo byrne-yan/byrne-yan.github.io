@@ -9,17 +9,19 @@ description: "颜俊标的视角看世界"
         <h2 class="post-title">
             {{ post.title }}
         </h2>
-        {% if post.subtitle %}
         <h3 class="post-subtitle">
+        {% if post.subtitle %}
             {{ post.subtitle }}
-        </h3>
+        {% else %}
+            {% if post.source %}[转载]{% endif %}
         {% endif %}
+        </h3>
         <div class="post-content-preview">
             {{ post.content | strip_html | truncate:200 }}
         </div>
     </a>
     <p class="post-meta">
-        {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} 发表于 {{ post.date | date: "%Y-%-m-%-d" }}
+        {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} {% if post.source %}转载{% else %}发表{% endif %}于 {{ post.date | date: "%Y-%-m-%-d" }}
     </p>
 </div>
 <hr>
@@ -30,12 +32,12 @@ description: "颜俊标的视角看世界"
 <ul class="pager">
     {% if paginator.previous_page %}
     <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; 最近博文</a>
     </li>
     {% endif %}
     {% if paginator.next_page %}
     <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">稍早些博文 &rarr;</a>
     </li>
     {% endif %}
 </ul>

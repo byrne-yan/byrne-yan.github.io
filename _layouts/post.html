@@ -27,9 +27,14 @@ layout: default
                         always create a h2 for keeping the margin , Hux
                     {% endcomment %}
                     {% comment %} if page.subtitle {% endcomment %}
-                    <h2 class="subheading">{{ page.subtitle }}</h2>
+                    <h2 class="subheading tags">
+                        {% if page.source %}来源: <a class="" href="{{ page.source-url }}">{{ page.source }}</a> {% else %} {{ page.subtitle }} {% endif %}
+                    </h2>
                     {% comment %} endif {% endcomment %}
-                    <span class="meta">{% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} 发表于 {{ page.date | date: "%Y-%-m-%-d" }}</span>
+                    <span class="meta">{% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} {% if page.source %}转载{% else %}发表{% endif %}于 {{ page.date | date: "%Y-%-m-%-d" }}</span>
+
+
+
                 </div>
             </div>
         </div>
