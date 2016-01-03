@@ -63,7 +63,7 @@ sh: can't kill pid 20: No such process
 花了很多时间查资料，实验各种方法，都没有成功。最后在仔细研读了Docker官方文档关于卷部分的资料后，终于看到了一段话：
 
 > If you are using Docker Machine on Mac or Windows, your Docker daemon has only limited access to your OS X or Windows filesystem. Docker Machine tries to auto-share your /Users (OS X) or C:\Users (Windows) directory. So, you can mount files or directories on OS X using.
-  
+>  
 > `docker run -v /Users/<path>:/<container path> ...`
 >  On Windows, mount directories using:
 >  
