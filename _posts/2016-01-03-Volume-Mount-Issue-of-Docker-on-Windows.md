@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Windows上绑定主机目录到容器内卷的问题"
+title:      "Docker on Windows绑定主机目录到容器内卷的问题"
 subtitle:   "主机与VM之间的目录共享及-v绑定语法"
 date:       2016-01-03 23:00:00 +0800
 author:     "颜俊标"
